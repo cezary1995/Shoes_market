@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="../styles/registerPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- ma pomóc rozwiązac problem pojawiania sie favicon 404 error-->
+    <link rel="shortcut icon" href="#"> 
+
+</head>
+<body>
+    <div id="container">
+        <!-- formularz do LOGOWANIA-->
+        <form method="post" class="form form__hidden" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" name="loginMail" class="form__input" id="loginMail" autofocus placeholder="Email">
+                <div id="loginMsg"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" name="loginPassword" class="form__input" id="loginPassword" placeholder="Password">
+                <div id="pswdMsg"></div>
+            </div>
+            <button class="form__button" type="submit">Login</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a href="./" id="linkCreateAccount" class="form__link">Create an account if you didn't do it yet.</a>
+            </p>
+        </form>
+
+        <!-- formularz do REJESTRACJI-->
+        <form method="post" class="form" id="createAccount">
+            <h1 class="form__title">Create an account</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" name="mail" class="form__input" id="mail" autofocus placeholder="Email">
+                <div id="invalidEmail"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" name="password" class="form__input" id="pswd" placeholder="Password">
+                <div id="invalidPassword"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" name="" class="form__input" id="pswd2" placeholder="Confirm password">
+                <div id="invalidPassword2"></div>
+            </div>
+            <button class="form__button" type="submit">Create an account</button>
+            <p class="form__text">
+                <a href="./" id="linkLogin" class="form__link">Already have an account? Sign in!</a>
+            </p>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
