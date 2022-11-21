@@ -176,9 +176,6 @@ window.onload = () => {
         // po wysłaniu zapytania, odbierany jest response a następnie następuje parsowanie z formatu 
         .then(res=>res.json())
         .then(res=>validateLogin(res))
-        
-        
+         
     })
-
-
 }
